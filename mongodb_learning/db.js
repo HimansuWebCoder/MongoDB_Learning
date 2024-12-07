@@ -1,6 +1,7 @@
 const { MongoClient } = require("mongodb");
+require("dotenv").config()
 
-const uri = "mongodb+srv://mongodb_test:mongodb9861@cluster0.yr6qm.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0";
+const uri = process.env.MONGO_URL;
 
 // Create a new fruit
 async function createFruit(fruit) {
